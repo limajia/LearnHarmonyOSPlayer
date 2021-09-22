@@ -1,0 +1,11 @@
+[
+    {
+        "Name": " ijkplayer",
+        "License": " LGPLv2.1，GNU LESSER GENERAL PUBLIC LICENSE Version 2.1, February 1999 ",
+        "License File": "COPYING.GPLv2，COPYING.GPLv3，COPYING.LGPLv2.1，COPYING.LGPLv2.1.txt，COPYING.LGPLv3，MODULE_LICENSE_APACHE2，NOTICE ",
+        "Version Number": "k0.8.8",
+        "Upstream URL": "https://github.com/bilibili/ijkplayer/archive/k0.8.8.tar.gz",
+        "Description": "video player based on FFmpeg, with MediaCodec, VideoToolbox support."
+    }
+]
+

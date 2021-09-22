@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:id="$+id:slice_video_root"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:background_element="#0099cc"
+    ohos:orientation="vertical">
+
+
+    <DirectionalLayout
+        ohos:id="$+id:slice_video_titlebar"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="#B0B0B0"
+        ohos:orientation="horizontal"
+        ohos:padding="10vp">
+
+        <Text
+            ohos:id="$+id:tv_action_back"
+            ohos:height="match_content"
+            ohos:width="0vp"
+            ohos:clickable="true"
+            ohos:layout_alignment="vertical_center"
+            ohos:text="videoplay"
+            ohos:text_size="15fp"
+            ohos:weight="2"
+            />
+    </DirectionalLayout>
+
+    <!-- The main content view -->
+    <StackLayout
+        ohos:id="$+id:stacklayout"
+        ohos:height="250vp"
+        ohos:width="match_parent">
+
+        <com.tv.danmaku.ijk.media.example.ui.widget.media.IjkVideoView
+            ohos:id="$+id:video_view"
+            ohos:height="250vp"
+            ohos:width="match_parent"
+            ohos:layout_alignment="center|horizontal_center"/>
+    </StackLayout>
+
+    <DirectionalLayout
+        ohos:id="$+id:media_controller_view"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="#77000000"
+        ohos:layout_alignment="bottom|horizontal_center"
+        ohos:orientation="vertical"
+        ohos:padding="10vp">
+        <!--播放 暂停 快进-->
+        <DependentLayout
+            ohos:id="$+id:layout1"
+            ohos:height="match_parent"
+            ohos:width="match_parent"
+            ohos:bottom_padding="10vp"
+            ohos:top_padding="10vp">
+
+            <Image
+                ohos:id="$+id:pause"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:center_in_parent="true"
+                ohos:image_src="$media:ic_media_play"
+                ohos:left_margin="30vp"
+                ohos:padding="7vp"
+                ohos:right_margin="30vp"/>
+            <Image
+                ohos:id="$+id:next"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:image_src="$media:ic_media_next"
+                ohos:padding="7vp"
+                ohos:right_of="$+id:pause"
+                ohos:visibility="visible"/>
+
+            <Image
+                ohos:id="$+id:prev"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:image_src="$media:ic_media_previous"
+                ohos:left_of="$+id:pause"
+                ohos:padding="7vp"
+                ohos:visibility="hide"
+                />
+
+            <Image
+                ohos:id="$+id:ffwd"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:padding="7vp"
+                ohos:image_src="$media:ic_media_ff"
+                ohos:right_of="$+id:next"
+                ohos:visibility="visible"/>
+
+            <Image
+                ohos:id="$+id:rew"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:padding="7vp"
+                ohos:image_src="$media:ic_media_rew"
+                ohos:left_of="$+id:prev"
+                ohos:visibility="visible"/>
+        </DependentLayout>
+
+        <DirectionalLayout
+            ohos:id="$+id:layout2"
+            ohos:top_margin="30vp"
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:orientation="horizontal">
+
+
+            <Text
+                ohos:id="$+id:time_current"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:layout_alignment="vertical_center"
+                ohos:left_padding="5vp"
+                ohos:right_padding="15vp"
+                ohos:text="00:00"
+                ohos:text_color="#961621"
+                ohos:text_size="14fp"/>
+
+            <Slider
+                ohos:id="$+id:mediacontroller_progress"
+                ohos:height="match_content"
+                ohos:width="0vp"
+                ohos:layout_alignment="vertical_center"
+                ohos:max="100"
+                ohos:min="0"
+                ohos:weight="1"/>
+
+            <Text
+                ohos:id="$+id:time"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:layout_alignment="vertical_center"
+                ohos:left_padding="15vp"
+                ohos:right_padding="5vp"
+                ohos:text_color="#961621"
+                ohos:text_size="14fp"/>
+        </DirectionalLayout>
+    </DirectionalLayout>
+
+
+    <ListContainer
+        ohos:id="$+id:hud_view"
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:background_element="#77000000"
+        ohos:layout_alignment="right|center"
+        ohos:top_margin="5vp"
+        ohos:visibility="visible"/>
+
+</DirectionalLayout>

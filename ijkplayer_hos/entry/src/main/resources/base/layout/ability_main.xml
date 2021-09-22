@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:id="$+id:ability_main_root"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:orientation="vertical">
+
+    <DirectionalLayout
+        ohos:id="$+id:ability_main_titlebar"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="#B0B0B0"
+        ohos:orientation="horizontal"
+        ohos:padding="10vp">
+
+
+        <Text
+            ohos:id="$+id:tv_sample_play_list"
+            ohos:height="match_content"
+            ohos:width="0vp"
+            ohos:text="IjkMediaPlay"
+            ohos:text_size="15fp"
+            ohos:weight="1"
+            />
+
+        <Text
+            ohos:id="$+id:tv_fullscreen_play"
+            ohos:height="match_content"
+            ohos:width="0vp"
+            ohos:text="OhosPlayer1"
+            ohos:text_size="15fp"
+            ohos:weight="1"
+            />
+    </DirectionalLayout>
+
+</DirectionalLayout>

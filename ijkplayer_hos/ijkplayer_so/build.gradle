@@ -1,0 +1,29 @@
+apply plugin: 'com.huawei.ohos.library'
+ohos {
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 4
+    }
+
+    externalNativeBuild {
+        path "src/main/cpp/CMakeLists.txt"
+        arguments "-v"
+//        abiFilters "arm64-v8a","armeabi-v7a"
+        abiFilters "arm64-v8a"
+    }
+
+    buildTypes {
+        release {
+            proguardOpt {
+                proguardEnabled false
+                rulesFiles 'proguard-rules.pro'
+            }
+        }
+    }
+    
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.13'
+}

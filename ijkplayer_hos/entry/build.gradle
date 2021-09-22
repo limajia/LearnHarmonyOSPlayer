@@ -1,0 +1,21 @@
+apply plugin: 'com.huawei.ohos.hap'
+ohos {
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 5
+    }
+    sourceSets {
+        main {
+            java {
+                srcDir 'libs'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile'junit:junit:4.12'
+    implementation project(":ijkplayer")
+    implementation project(":ijkplayer_so")
+}

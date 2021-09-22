@@ -1,0 +1,27 @@
+{
+  "app": {
+    "bundleName": "tv.danmaku.ijk.media.player",
+    "vendor": "ijkplayer",
+    "version": {
+      "code": 1000000,
+      "name": "1.0"
+    },
+    "apiVersion": {
+      "compatible": 5,
+      "target": 5,
+      "releaseType": "Beta1"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "tv.danmaku.ijk.media.player",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "ijkplayer",
+      "moduleType": "har"
+    }
+  }
+}
